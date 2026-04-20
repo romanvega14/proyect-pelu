@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMBRE DE TU PELUQUERÍA | Peluquería y Estilismo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #1a1a1a;
+            --gold: #c5a059;
+            --accent: #25d366; 
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--primary);
+            background-color: white;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-barber {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+        }
+
+        .gold-button {
+            background-color: var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .gold-button:hover {
+            background-color: #a38445;
+            transform: scale(1.05);
+        }
+
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="bg-white border-b sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-scissors text-2xl text-[#c5a059]"></i>
+                <span class="text-2xl font-bold tracking-tighter uppercase">TU NEGOCIO<span class="text-[#c5a059]">&</span>ESTILO</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-semibold text-xs uppercase tracking-widest">
+                <a href="#" class="hover:text-[#c5a059] transition-colors border-b-2 border-transparent hover:border-[#c5a059]">Inicio</a>
+                <a href="#servicios" class="hover:text-[#c5a059] transition-colors">Servicios</a>
+                <a href="#" class="hover:text-[#c5a059] transition-colors">Galería</a>
+                <a href="#" class="hover:text-[#c5a059] transition-colors">Contacto</a>
+            </nav>
+            <div class="md:hidden">
+                <i class="fa-solid fa-bars-staggered text-2xl cursor-pointer"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-barber h-[75vh] flex items-center justify-center text-white text-center px-4">
+        <div class="max-w-3xl">
+            <span class="text-[#c5a059] uppercase tracking-[0.3em] font-bold mb-4 block">Expertos en Tendencias</span>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">Redefine tu Estilo</h1>
+            <p class="text-lg md:text-xl mb-10 font-light opacity-90">
+                Cortes de autor, coloración premium y tratamientos capilares personalizados para que luzcas tu mejor versión.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/34664700341?text=Hola!%20Quiero%20pedir%20cita%20online" target="_blank" class="gold-button text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest inline-block shadow-xl">
+                    Pedir Cita Online
+                </a>
+                <a href="#servicios" class="bg-transparent border border-white text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all inline-block">
+                    Ver Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-[#fdfdfd]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Nuestras Especialidades</h2>
+                <div class="w-20 h-1 bg-[#c5a059] mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Servicio 1 -->
+                <div class="bg-white p-10 rounded-sm text-center card-hover transition-all border border-slate-100 shadow-sm">
+                    <div class="mb-6">
+                        <i class="fa-solid fa-wind text-4xl text-[#c5a059]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Corte & Peinado</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Desde cortes clásicos hasta las últimas tendencias. Incluye asesoramiento de visagismo según tus facciones.</p>
+                    <span class="text-[#c5a059] font-bold">Desde 25€</span>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="bg-white p-10 rounded-sm text-center card-hover transition-all border border-slate-100 shadow-sm">
+                    <div class="mb-6">
+                        <i class="fa-solid fa-palette text-4xl text-[#c5a059]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Coloración Pro</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Balayage, Babylights y color total con productos orgánicos que cuidan la salud de tu fibra capilar.</p>
+                    <span class="text-[#c5a059] font-bold">Desde 45€</span>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="bg-white p-10 rounded-sm text-center card-hover transition-all border border-slate-100 shadow-sm">
+                    <div class="mb-6">
+                        <i class="fa-solid fa-bottle-droplet text-4xl text-[#c5a059]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tratamientos</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Hidratación profunda, queratina y bótox capilar para recuperar el brillo y la suavidad de tu melena.</p>
+                    <span class="text-[#c5a059] font-bold">Desde 35€</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="py-16 px-4 bg-[#1a1a1a] text-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-8 md:mb-0">
+                <h2 class="text-3xl font-bold mb-2">¿Primera vez con nosotros?</h2>
+                <p class="text-slate-400">Recibe un <span class="text-[#c5a059] font-bold">15% de descuento</span> en tu primer servicio de color.</p>
+            </div>
+            <a href="https://wa.me/34664700341?text=Hola!%20He%20visto%20la%20promo%20del%2015%%20de%20descuento" class="gold-button px-8 py-3 rounded-sm font-bold uppercase text-sm tracking-widest">Obtener Cupón</a>
+        </div>
+    </section>
+
+    <!-- Visual Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-0 shadow-2xl rounded-sm overflow-hidden">
+                <div class="h-[400px] md:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Interior Peluquería" class="w-full h-full object-cover">
+                </div>
+                <div class="bg-white p-12 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-6">El Salón</h2>
+                    <p class="text-slate-600 mb-6 italic">"Un espacio diseñado para tu relax. Utilizamos productos de alta gama y técnicas europeas para garantizar resultados excepcionales."</p>
+                    <div class="space-y-2 text-sm">
+                        <p><i class="fa-solid fa-location-dot text-[#c5a059] mr-2"></i> Calle Real, 10 - Tu Ciudad</p>
+                        <p><i class="fa-solid fa-clock text-[#c5a059] mr-2"></i> L-V: 09:00 - 20:00 | S: 09:00 - 14:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-6">
+                <i class="fa-solid fa-scissors text-xl text-[#c5a059]"></i>
+                <span class="text-xl font-bold uppercase tracking-tighter">TU NEGOCIO<span class="text-[#c5a059]">&</span>ESTILO</span>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-slate-400 hover:text-[#c5a059]"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="text-slate-400 hover:text-[#c5a059]"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+            </div>
+            <p class="text-slate-400 text-[10px] uppercase tracking-[0.2em]">&copy; 2025 TU NEGOCIO SALÓN DE BELLEZA</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/34664700341?text=Hola!%20Quiero%20reservar%20cita%20para%20peluquería" 
+       class="fixed bottom-6 right-6 bg-[#25d366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-[9999]"
+       title="Reservar Cita WhatsApp"
+       target="_blank">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+</html>
